@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Icon from '@material-ui/core/Icon';
 import { useHistory } from 'react-router';
 const useStyles = makeStyles({
     root: {
@@ -18,12 +19,12 @@ const useStyles = makeStyles({
   });
   
 const SingleLeague = (props) => {
-    const league=props?.data
-    console.log(league);
+    const {idLeague,strBadge,strLeague,strSport}=props?.data
+ 
     const classes = useStyles();
     const history=useHistory()
     const onDetails=()=>{
-        history.push(`/league/${league.idLeague}`)
+        history.push(`/league/${idLeague}`)
     }
     return (
         <Card className={classes.root}>
@@ -31,23 +32,26 @@ const SingleLeague = (props) => {
          
                 <CardMedia
                 className={classes.media}
-                image={league?.strBadge}
+                image={strBadge}
                 // src={league?.strBanner}
                 title="Contemplative Reptile"
               /> 
          
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              {league.strLeague}
+              {strLeague}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-            Sports Type: {league.strSport}
+            Sports Type: {strSport}
             </Typography>
           </CardContent>
         </CardActionArea>
         <CardActions style={{justifyContent: "center"}}>
         
-          <Button onClick={onDetails} variant="contained" size="small" color="primary">
+          <Button onClick={onDetails} 
+          
+        endIcon={<i class="fa fa-arrow-right"></i>}
+          variant="contained" size="small" color="primary">
             Learn More
           </Button>
         </CardActions>

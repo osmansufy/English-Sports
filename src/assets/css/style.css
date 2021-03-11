@@ -4,6 +4,11 @@ img{
     object-fit: cover;
     object-position: center;
 }
+body{
+    background-color: #1A1A1A;
+    color: aliceblue;
+}
+
 li{
     list-style: none;
 }
@@ -23,8 +28,8 @@ li{
 .bannerImg-container {
     max-width: 250px;
     margin: 0 auto;
-    padding: 200px 0;
-   
+    padding: 10% 0;
+    position: relative;
 }
 .leagueDetails{
     display: flex;
@@ -64,12 +69,16 @@ a.webIcon {
 /* .w-100 .makeStyles-root-1{
     max-width: 100%;
 } */
-
+.banner-content {
+    padding: 10% 0;
+    position: relative;
+}
+.banner-content h2{
+    color: aliceblue;
+}
 @media(max-width:560px){
     .img-container{
         max-width: 100%;
     }
-    .bannerImg-container{
-        padding: 50px 0;
-    }
+  
 }
