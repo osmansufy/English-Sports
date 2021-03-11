@@ -4,8 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import Grid from "@material-ui/core/Grid";
 import maleIng from "../../assets/images/male.png";
-import femaleImg from "../../assets/images/female.png";
-import facebookIcon from "../../assets/images/Icon/Facebook.png";
+import SportsSoccerIcon from '@material-ui/icons/SportsSoccer';
 import twitterIcon from "../../assets/images/Icon/Twitter.png";
 import youTubeIcon from "../../assets/images/Icon/YouTube.png";
 import LanguageIcon from "@material-ui/icons/Language";
@@ -66,7 +65,7 @@ const LeagueDetails = () => {
                 <span>Country:{legueDetails.strCountry}</span>
               </li>
               <li>
-                <i className="fa fa-podcast"></i>
+              <i class="fa fa-adjust"></i>
                 <span>Sports type:{legueDetails.strSport}</span>
               </li>
               <li>
